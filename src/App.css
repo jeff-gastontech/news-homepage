@@ -36,3 +36,56 @@
     transform: rotate(360deg);
   }
 }
+
+.Link {
+  text-decoration: none;
+  color: gray;
+}
+
+.Active-Link {
+  text-decoration: none;
+  color: #f44336;
+}
+
+.Regular-Text {
+  color: #757575;
+}
+
+.Button {
+  background-color: #f44336 !important;
+  width: 50%;
+  height: 50%;
+  border-radius: 0;
+}
+
+.Button:hover {
+  background-color: #00001A !important;
+}
+
+.New-Articles {
+  background-color: #00001A;
+}
+
+.New-Article-Heading {
+  color: #E9AA52;
+}
+
+a.New-Article-Link {
+  text-decoration: none;
+  color: #fff;
+}
+
+a.New-Article-Link:active {
+  color: #E9AA52;
+}
+
+a.New-Article-Link:hover {
+  color: #E9AA52;
+}
+
+div > img {
+  width: auto;
+  height : auto;
+  max-height: 100%;
+  max-width: 100%;
+}
