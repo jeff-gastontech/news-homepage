@@ -62,7 +62,7 @@
 .Button {
   background-color: #f44336 !important;
   width: 50%;
-  height: 50%;
+  height: 100%;
   border-radius: 0;
 }
 
@@ -98,9 +98,3 @@ a.New-Article-Link:hover {
   color: #E9AA52;
 }
 
-div > img {
-  width: auto;
-  height : auto;
-  max-height: 100%;
-  max-width: 100%;
-}

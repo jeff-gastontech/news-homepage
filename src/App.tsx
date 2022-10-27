@@ -85,9 +85,9 @@ function App() {
     );
 
     return (
-        <Box component={"main"} sx={{padding: "20px"}} flexGrow={1} maxWidth="95%" maxHeight="95%" margin="auto">
-            <Grid container xs={12} spacing={2} justifyContent="space-between">
-                <Grid container xs={12} spacing={2} alignItems="center">
+        <Box component={"main"} sx={{padding: "20px"}} display="flex">
+            <Grid container xs={12} flexGrow={1} spacing={2}>
+                <Grid container xs={12} spacing={0} alignItems="center">
                     <Grid xs={7}>
                         <img src={Logo}/>
                     </Grid>
@@ -126,31 +126,33 @@ function App() {
                     )}
 
                 </Grid>
-                <Grid container xs={12} md={7} paddingTop={0}>
-                    <Grid xs={12} paddingRight={"20px"}>
-                        <img src={MainImage}/>
+                <Grid container xs={12} md={8} spacing={0} flexGrow={1}>
+                    <Grid xs={12} sx={{paddingTop: 0}}>
+                        <img style={{width: "100%", height: "100%"}} src={MainImage}/>
                     </Grid>
-                    <Grid xs={12} md={6}>
-                        <Typography variant="h1" sx={{fontWeight: "bold", color: "black"}}>
-                            The Bright Future of Web 3.0?
-                        </Typography>
-                    </Grid>
-                    <Grid container xs={12} md={6}>
-                        <Grid xs={12} className="Regular-Text">
-                            <Typography variant="h5">
-                                We dive into the next evolution of the web that claims to put the power of the platforms
-                                back into the hands of the people.
-                                But is it really fulfilling its promise?
+                    <Grid container xs={12} style={matches ? {} : {padding: 0}}>
+                        <Grid xs={12} md={6} >
+                            <Typography variant="h1" sx={{fontWeight: "bold", color: "black"}}>
+                                The Bright Future of Web 3.0?
                             </Typography>
                         </Grid>
-                        <Grid xs={12} style={matches ? {position: "relative"} : {paddingLeft: 0, paddingRight: 0}}>
-                            <Button variant="contained" className={matches ? "Button" : "Button-Full"} style={matches ? {position: "absolute",left: "8px", right: "8px"} : {}}>
-                                Read more
-                            </Button>
+                        <Grid container xs={12} md={6} sx={{padding:0}}>
+                            <Grid xs={12} className="Regular-Text">
+                                <Typography variant="h5">
+                                    We dive into the next evolution of the web that claims to put the power of the platforms
+                                    back into the hands of the people.
+                                    But is it really fulfilling its promise?
+                                </Typography>
+                            </Grid>
+                            <Grid xs={12} >
+                                <Button variant="contained" className={matches ? "Button" : "Button-Full"}>
+                                    Read more
+                                </Button>
+                            </Grid>
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid container xs={12} md={4}>
+                <Grid container xs={12} md={4} spacing={0}>
                     <Paper id="articles" className="New-Articles">
                         <Grid xs={12} paddingTop={"8px"} paddingLeft={"8px"}>
                             <Typography variant="h3" className={"New-Article-Heading"}>
@@ -195,10 +197,10 @@ function App() {
                         </Grid>
                     </Paper>
                 </Grid>
-                <Grid container xs={12} spacing={2} paddingTop={8}>
-                    <Grid container xs={12} md={4}>
-                        <Grid xs={3}>
-                            <img src={ComputerImage}/>
+                <Grid container xs={12} >
+                    <Grid container xs={12} md={4} flexGrow={1}>
+                        <Grid xs={4}>
+                            <img style={{width: "100%"}} src={ComputerImage}/>
                         </Grid>
                         <Grid container xs={8}>
                             <Grid xs={12}><Typography variant="h2" color="grey.500">01</Typography></Grid>
@@ -209,8 +211,8 @@ function App() {
                         </Grid>
                     </Grid>
                     <Grid container xs={12} md={4}>
-                        <Grid xs={3}>
-                            <img src={KeyboardImage}/>
+                        <Grid xs={4}>
+                            <img style={{width: "100%"}}  src={KeyboardImage}/>
                         </Grid>
                         <Grid container xs={8}>
                             <Grid xs={12}><Typography variant="h2" color="grey.500">02</Typography>
@@ -223,8 +225,8 @@ function App() {
                         </Grid>
                     </Grid>
                     <Grid container xs={12} md={4}>
-                        <Grid xs={3}>
-                            <img src={ControllerImage} style={{objectFit:"fill"}}/>
+                        <Grid xs={4}>
+                            <img  style={{width: "100%"}}  src={ControllerImage}/>
                         </Grid>
                         <Grid container xs={8}>
                             <Grid xs={12}><Typography variant="h2" color="grey.500">03</Typography>
